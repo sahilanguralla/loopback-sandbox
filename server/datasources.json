@@ -1,6 +1,13 @@
 {
-  "db": {
-    "name": "db",
-    "connector": "memory"
-  }
+  	"db": {
+	    "name": "db",
+	    "connector": "memory"
+	},
+  	"postgres": {
+		"name": "postgres",
+		"connector": "postgresql",
+		"database": "loopback-sandbox",
+		"username": "loopback-sandbox",
+		"password": "loopback-sandbox"
+	}
 }

@@ -31,5 +31,17 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Poet": {
+    "dataSource": "postgres",
+    "public": true
+  },
+  "WriteAuthorization": {
+    "dataSource": "postgres",
+    "public": false
+  },
+  "Organisation": {
+    "dataSource": "postgres",
+    "public": true
   }
 }

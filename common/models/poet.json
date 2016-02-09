@@ -1,0 +1,72 @@
+{
+  "name": "Poet",
+  "plural": "poets",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "emails": {
+      "type": [
+        "object"
+      ],
+      "postgresql": {
+        "dataType": "json"
+      }
+    },
+    "phones": {
+      "type": [
+        "object"
+      ],
+      "postgresql": {
+        "dataType": "json"
+      }
+    },
+    "dob": {
+      "type": "date"
+    },
+    "links": {
+      "type": [
+        "object"
+      ],
+      "postgresql": {
+        "dataType": "json"
+      }
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "updatedAt": {
+      "type": "date"
+    },
+    "keys": {
+      "type": "object",
+      "required": true,
+      "postgresql": {
+        "dataType": "json"
+      }
+    },
+    "extraData": {
+      "type": "object",
+      "required": true,
+      "postgresql": {
+        "dataType": "json"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "authorities": {
+      "type": "hasMany",
+      "model": "WriteAuthorization",
+      "polymorphic": "authority"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

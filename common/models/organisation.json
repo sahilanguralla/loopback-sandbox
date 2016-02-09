@@ -1,0 +1,70 @@
+{
+  "name": "Organisation",
+  "plural": "organisations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "orgData": {
+      "type": "object",
+      "postgresql": {
+        "dataType": "json"
+      }
+    },
+    "addresses": {
+      "type": [
+        "object"
+      ],
+      "postgresql": {
+        "dataType": "json"
+      }
+    },
+    "phones": {
+      "type": [
+        "object"
+      ],
+      "postgresql": {
+        "dataType": "json"
+      }
+    },
+    "website": {
+      "type": "string"
+    },
+    "links": {
+      "type": [
+        "object"
+      ],
+      "postgresql": {
+        "dataType": "json"
+      }
+    },
+    "extraData": {
+      "type": "object",
+      "postgresql": {
+        "dataType": "json"
+      }
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "updatedAt": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "authorities": {
+      "type": "hasMany",
+      "model": "WriteAuthorization",
+      "polymorphic": "authority"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
